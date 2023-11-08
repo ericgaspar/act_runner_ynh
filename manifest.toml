@@ -2,21 +2,20 @@
 
 packaging_format = 2
 
-id = "example"
-name = "Example app"
-description.en = "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)"
-description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+id = "gitea-runner"
+name = "Gitea Runner"
+description.en = "Runner for Gitea based on act"
+description.fr = "Runner pour Gitea basé sur act"
 
 version = "0.2.6~ynh1"
 
-maintainers = ["johndoe"]
+maintainers = ["eric_G"]
 
 [upstream]
 license = "free"
 website = "https://example.com"
 demo = "https://demo.example.com"
 admindoc = "https://yunohost.org/packaging_apps"
-userdoc = "https://yunohost.org/apps"
 code = "https://gitea.com/gitea/act_runner"
 
 [integration]
@@ -54,14 +53,17 @@ ram.runtime = "50M"
     [install.admin]
     type = "user"
 
-
 [resources]
 
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://gitea.com/gitea/act_runner/releases/download/v0.2.6/act_runner-0.2.6-linux-amd64"
-        sha256 = "234c2bdb871e7b0bfb84697f353395bfc7819faf9f0c0443845868b64a041057"
+        amd64.url = "https://gitea.com/gitea/act_runner/releases/download/v0.2.6/act_runner-0.2.6-linux-amd64"
+        amd64.sha256 = "234c2bdb871e7b0bfb84697f353395bfc7819faf9f0c0443845868b64a041057"
+        arm64.url = "https://gitea.com/gitea/act_runner/releases/download/v0.2.6/act_runner-0.2.6-linux-arm64"
+        arm64.sha256 = "f5c477b54d7db5289acee6b59cd96b28de4bdda809f79e830662d4c952b2914d"
+        armhf.url = "https://gitea.com/gitea/act_runner/releases/download/v0.2.6/act_runner-0.2.6-linux-arm-7"
+        armhf.sha256 = "b9e7d4058e335513be0a76180e11f4f3971486ad7d64358f7ecde734b8ca19fa"
         in_subdir = false
         extract = false
         rename = "act_runner"
