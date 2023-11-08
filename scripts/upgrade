@@ -54,7 +54,7 @@ yunohost service add $app --description="Runner for Gitea" --log="/var/log/$app/
 
 #ynh_add_config --template="some_config_file" --destination="$install_dir/some_config_file"
 
-c#hmod 400 "$install_dir/some_config_file"
+#chmod 400 "$install_dir/some_config_file"
 #chown $app:$app "$install_dir/some_config_file"
 
 #=================================================
