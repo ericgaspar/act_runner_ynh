@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description=Gitea Runner
 After=network.target
 
 [Service]
@@ -8,8 +8,8 @@ User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
 ExecStart=__INSTALL_DIR__/act_runner daemon
-StandardOutput=append:/var/log/__APP__/__APP__.log
-StandardError=inherit
+#StandardOutput=append:/var/log/__APP__/__APP__.log
+#StandardError=inherit
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these
